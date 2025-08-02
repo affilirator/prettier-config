@@ -1,13 +1,20 @@
 {
-  "name": "@selfhosted/prettier-config",
+  "name": "@selfhosted/dev-prettier-config",
   "version": "1.0.0",
-  "description": "My personal Prettier config",
+  "description": "Dev Mahinge Prettier config",
   "main": "index.json",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0",
+    "prettier-standard": "^16.4.1"
+  },
   "repository": "git@github.com:affilirator/prettier-config.git",
-  "author": "Lucas Azzola <lucas@azzola.dev>",
+  "author": "Patrick Mahinge <dev@mahinge.com>",
   "license": "MIT"
 }
